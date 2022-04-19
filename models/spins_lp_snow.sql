@@ -1,4 +1,4 @@
- 
+  
 with basic_calculations as (
 
 select "Product_Level","Subcategory" ,"Brand" , "Product_Universe" , "UPC" , "Time_Period" ,"Time_Period_End_Date", "geography" , "POSITIONING_GROUP" , "Category" , "COMPANY"
