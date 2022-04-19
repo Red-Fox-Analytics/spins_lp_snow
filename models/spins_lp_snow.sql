@@ -103,7 +103,7 @@ select *
 	, cast(sales as float)/nullif(sales_2_yago,0) -1 sales_per_change_2_yago
 	, cast(sales as float)/nullif(sales_yago,0) -1 sales_per_change_yago
 	, cast(sales as float) - nullif(sales_2_yago,0) sales_change_2_yago
-m, cast(sales as float) - nullif(sales_yago,0) sales_change_yago
+    , cast(sales as float) - nullif(sales_yago,0) sales_change_yago
 	, cast(sales_display_only as float)/nullif(sales_display_only_2_yago,0) -1 sales_display_only_per_change_2_yago
 	, cast(sales_display_only as float)/nullif(sales_display_only_yago,0) -1 sales_display_only_per_change_yago
 	, cast(sales as float) - sales_promo sales_non_promo
