@@ -35,5 +35,4 @@ models:
   spins_lp_snow:
     # Config indicated by + and applies to all files under models/example/
     +materialized: table
-    example:
-      +materialized: view
+   

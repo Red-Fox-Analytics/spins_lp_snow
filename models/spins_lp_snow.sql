@@ -65,7 +65,7 @@ select "Product_Level","Subcategory" ,"Brand" , "Product_Universe" , "UPC" , "Ti
 			, "PRODUCT_TYPE" , "DIET_KETO_DIET" , "DIET_PLANT_BASED_DIET" , "FLAVOR" , "INGREDIENT_OAT" , INGREDIENT_SOY_ALLERGEN
 			, ingredient_wheat_allergen , labeled_allergen_friendly , labeled_grain_free , labeled_gluten_free , labeled_non_gmo 
 			, labeled_organic , pack_count , paleo , "SIZE"
-	limit 10
+	--limit 10
 ), level_2 as (
 select * 
 	, sum(sales) over(partition by "geography","Time_Period","Time_Period_End_Date") total_category_sales
@@ -103,7 +103,7 @@ select *
 	, cast(sales as float)/nullif(sales_2_yago,0) -1 sales_per_change_2_yago
 	, cast(sales as float)/nullif(sales_yago,0) -1 sales_per_change_yago
 	, cast(sales as float) - nullif(sales_2_yago,0) sales_change_2_yago
-	, cast(sales as float) - nullif(sales_yago,0) sales_change_yago
+m, cast(sales as float) - nullif(sales_yago,0) sales_change_yago
 	, cast(sales_display_only as float)/nullif(sales_display_only_2_yago,0) -1 sales_display_only_per_change_2_yago
 	, cast(sales_display_only as float)/nullif(sales_display_only_yago,0) -1 sales_display_only_per_change_yago
 	, cast(sales as float) - sales_promo sales_non_promo
